@@ -1,40 +1,39 @@
 import React from 'react';
+import heroBg from '../assets/herobg.jpg';
 
 const HeroSection = () => {
   return (
-   <section className="text-gray-100 body-font bg-gradient-to-br from-indigo-900 via-purple-900 to-black min-h-60vh flex items-center">
-  <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <section
+      className="relative w-full h-[95vh] bg-cover bg-center text-white"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
+      <div className="absolute inset-0 bg-primary z-10 opacity-85" />
 
-    <div className="lg:flex-grow md:w-1/2 lg:pr-20 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 className="title-font sm:text-6xl text-4xl mb-4 font-extrabold text-white animate-pulse">
-        VISCA GAMES 2025
-        <br className="hidden lg:inline-block" />
-        <span className="text-purple-400 ">Coming Soon</span>
-      </h1>
-      <p className="mb-8 leading-relaxed text-2xl text-gray-300 animate-pulse">
-        Be ready for the most electrifying gaming tournaments, challenges, and epic events. Powered by passion, built for gamers. 🎮🔥
-      </p>
-      <div className="flex justify-center mt-1.5">
-        <button className="inline-flex text-white bg-purple-600 border-0 py-3 px-8 focus:outline-none hover:bg-purple-700 rounded-lg text-lg animate-bounce">
-          Notify Me
-        </button>
-        <button className="ml-4  inline-flex text-purple-400 bg-gray-800 border border-purple-500 py-3 px-8 focus:outline-none hover:bg-gray-700 hover:text-white rounded-lg text-lg animate-bounce">
-          Learn More
-        </button>
+      <div className="relative z-20 flex flex-col items-center justify-center h-full px-6 text-center">
+        <p className="text-sm md:text-base uppercase tracking-widest text-gray-300 mb-4 animate-fadeIn">
+          International Cricket Academy
+        </p>
+
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6 max-w-4xl drop-shadow-lg animate-fadeInUp tracking-tight">
+          <span className="block">Build Grit.</span>
+          <span className="block text-secondary">Own the Field.</span>
+        </h1>
+
+        <p className="text-md md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed animate-fadeIn delay-150">
+          Train under world-class coaches. Compete globally. Become the athlete you were born to be — only at WICA.
+        </p>
+
+        <div className="relative inline-block">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary blur-lg opacity-100 animate-pulse"></div>
+          <a
+            href="#join"
+            className="relative animate-bounce  inline-block  rounded-full px-10 py-3 text-white font-semibold text-lg uppercase tracking-wide border-2 border-white hover:bg-secondary hover:text-white transition duration-300 ease-in-out shadow-lg"
+          >
+            Join the Academy Now
+          </a>
+        </div>
       </div>
-    </div>
-
-    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 ">
-      <img
-        className="object-cover object-center rounded-xl shadow-xl"
-        alt="hero"
-        src="https://img.freepik.com/free-vector/hand-drawn-gaming-logo-template_23-2150730869.jpg"
-      />
-    </div>
-
-  </div>
-</section>
-
+    </section>
   );
 };
 

@@ -1,59 +1,87 @@
+import React from "react";
+import {
+  FaFacebookF,
+  FaEnvelope,
+  FaWhatsapp,
+  FaTiktok
+} from "react-icons/fa";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10 mt-16">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 md:px-0">
         {/* Logo & Description */}
         <div>
-          <h1 className="text-2xl font-bold text-purple-500 mb-3">GameZone</h1>
-          <p className="text-sm">
-            Your ultimate destination for gaming battles, updates, and community events.
+          <h1 className="text-2xl font-bold text-secondary mb-3">WICA</h1>
+          <p className="text-sm max-w-xs leading-relaxed">
+            The premier international cricket academy dedicated to nurturing world-class athletes, coaches, and champions.
           </p>
         </div>
 
-        {/* Links */}
+        {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-2">Quick Links</h3>
+          <h3 className="text-lg font-semibold text-secondary mb-2">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-purple-400 transition">Home</a></li>
-            <li><a href="#" className="hover:text-purple-400 transition">About</a></li>
-            <li><a href="#" className="hover:text-purple-400 transition">Games</a></li>
-            <li><a href="#" className="hover:text-purple-400 transition">Contact</a></li>
+            <li><a href="/" className="hover:text-secondary transition">Home Page</a></li>
+            <li><a href="/about" className="hover:text-secondary transition">About Us</a></li>
+            <li><a href="/#events" className="hover:text-secondary transition">Our Events</a></li>
+            <li><a href="/#contact" className="hover:text-secondary transition">Contact Us</a></li>
           </ul>
         </div>
 
         {/* Social Media */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-2">Follow Us</h3>
-          <ul className="flex space-x-4 text-xl">
-            <li><a href="#" className="hover:text-purple-400 transition"><i className="fab fa-facebook-f"></i></a></li>
-            <li><a href="#" className="hover:text-purple-400 transition"><i className="fab fa-twitter"></i></a></li>
-            <li><a href="#" className="hover:text-purple-400 transition"><i className="fab fa-instagram"></i></a></li>
-            <li><a href="#" className="hover:text-purple-400 transition"><i className="fab fa-discord"></i></a></li>
-          </ul>
+          <h3 className="text-lg font-semibold text-secondary mb-2">Follow Us</h3>
+          <div className="flex space-x-5 text-xl">
+            <a
+              href="https://wa.me/923312111666"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="hover:text-green-500 transition"
+            >
+              <FaWhatsapp />
+            </a>
+            <a
+              href="mailto:info@wica.pk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email"
+              className="hover:text-blue-400 transition"
+            >
+              <FaEnvelope />
+            </a>
+            <a
+              href="https://www.facebook.com/www.wica.org.pk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="hover:text-blue-500 transition"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.tiktok.com/@wica"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              className="hover:text-pink-400 transition"
+            >
+              <FaTiktok />
+            </a>
+          </div>
         </div>
 
-        {/* Newsletter */}
+        {/* Empty or Additional Column
         <div>
-          <h3 className="text-lg font-semibold text-white mb-2">Subscribe</h3>
-          <form className="space-y-3">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="w-full px-3 py-2 text-sm bg-gray-800 text-white border border-gray-600 rounded"
-            />
-            <button
-              type="submit"
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white text-sm py-2 rounded transition"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
+          <h3 className="text-lg font-semibold text-secondary mb-2">Stay Updated</h3>
+          <p className="text-sm text-gray-400">Subscribe to our channels and follow for daily updates.</p>
+        </div> */}
       </div>
 
       {/* Bottom */}
-      <div className="mt-10 text-center text-xs text-gray-500 border-t border-gray-700 pt-4">
-        &copy; {new Date().getFullYear()} GameZone. All rights reserved.
+      <div className="container mx-auto text-center text-xs text-gray-500 border-t border-gray-700 pt-4 mt-10 px-4 md:px-0">
+        &copy; {new Date().getFullYear()} WICA International Cricket Academy. All rights reserved.
       </div>
     </footer>
   );
