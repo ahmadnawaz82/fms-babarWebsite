@@ -1,6 +1,10 @@
----
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ixwcywfs/public_html/
-    - /bin/cp * $DEPLOYPATH
-  
+    - echo "Switching to repo directory"
+    - cd fms-babarWebsite
+    - echo "Installing dependencies"
+    - /opt/cpanel/ea-nodejs20/bin/npm install
+    - echo "Building Vite project"
+    - /opt/cpanel/ea-nodejs20/bin/npm run build
+    - echo "Copying build to public_html (without deleting existing files)"
+    - cp -r dist/* ~/public_html/
