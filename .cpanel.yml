@@ -1,10 +1,10 @@
 deployment:
   tasks:
-    - echo "Switching to repo directory"
+    - echo " Switching to repo directory "
     - cd fms-babarWebsite
-    - echo "Installing dependencies"
+    - echo " Installing dependencies "
     - /opt/cpanel/ea-nodejs20/bin/npm install
-    - echo "Building Vite project"
+    - echo " Building Vite project "
     - /opt/cpanel/ea-nodejs20/bin/npm run build
-    - echo "Copying build to public_html (without deleting existing files)"
+    - echo " Copying build to public_html (without deleting existing files) "
     - cp -r dist/* ~/public_html/
