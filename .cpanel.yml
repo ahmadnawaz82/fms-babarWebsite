@@ -1,10 +1,9 @@
 deployment:
   tasks:
-    - echo " Switching to repo directory "
-    - cd fms-babarWebsite
     - echo " Installing dependencies "
     - /opt/cpanel/ea-nodejs20/bin/npm install
     - echo " Building Vite project "
     - /opt/cpanel/ea-nodejs20/bin/npm run build
-    - echo " Copying build to public_html (without deleting existing files) "
-    - cp -r dist/* ~/public_html/
+    - echo " Copying build to public_html "
+    - cp -r dist/* ../../public_html/
+  working_directory: /home1/ixwcywfs/repositories/fms-babarWebsite
