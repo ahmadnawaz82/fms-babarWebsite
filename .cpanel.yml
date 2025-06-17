@@ -5,5 +5,6 @@ deployment:
     - echo " Building Vite project "
     - /opt/cpanel/ea-nodejs20/bin/npm run build
     - echo " Copying build to public_html "
-    - cp -r dist/* ../../public_html/
-  working_directory: /home1/ixwcywfs/repositories/fms-babarWebsite
+    - cp -r dist/* /home1/ixwcywfs/public_html/
+
+  working_directory: /home1/ixwcywfs/public_html/fms-babarWebsite
